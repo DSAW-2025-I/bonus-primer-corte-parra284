@@ -4,10 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/styles.css" />
-    <title>Document</title>
+    <title>TO-DO List</title>
   </head>
   <body>
-    <h1>Mi TODO list</h1>
+    <main>
+      <form id="todo-form">
+          <input type="text" id="task-input" placeholder="Add a task" name="task" aria-label="Task input">
+          <button type="submit">+</button>
+      </form>
+      
+      <ul id="task-list"></ul>
+    </main>
     <script src="scripts/script.js"></script>
   </body>
 </html>
