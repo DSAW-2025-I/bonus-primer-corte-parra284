@@ -46,8 +46,11 @@ form {
 
 #task-list {
     list-style: none;
-    margin-top: 20px;
-    width: 300px;
+    margin-top: 50px;
+    width: 600px;
+    margin-bottom: 50px;
+    overflow-y: auto;
+    border: solid black 2px;
 }
 
 @media (max-width: 700px) {
