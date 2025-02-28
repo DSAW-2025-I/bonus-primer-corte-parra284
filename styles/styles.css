@@ -13,7 +13,7 @@ main {
     padding-top: 50px;
 }
 
-form {
+#todo-form {
     display: flex;
     justify-content: center;
     height: 50px;
@@ -50,7 +50,61 @@ form {
     width: 600px;
     margin-bottom: 50px;
     overflow-y: auto;
-    border: solid black 2px;
+    border-radius: 5px;
+    border: solid rgb(190, 186, 186) 2px;
+}
+
+.task-item {
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+
+.task-text {
+    background: white;
+    width: 80%;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.complete-btn {
+    background-color: white;
+    color: #099d2c;
+    width: 7%;
+    border-radius: 5px;
+    padding: 10px;
+    border: solid 2px #099d2c;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: #099d2c;
+        color: white;
+        border: solid white 2px;
+    }
+}
+
+.delete-btn {
+    background-color: white;
+    color: #b30b0b;
+    width: 7%;
+    border-radius: 5px;
+    padding: 10px;
+    border: solid #b30b0b 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: #b30b0b;
+        color: white;
+        border: solid white 2px;
+    }
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.7;
 }
 
 @media (max-width: 700px) {

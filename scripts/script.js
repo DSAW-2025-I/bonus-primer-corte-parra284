@@ -13,17 +13,37 @@ form.addEventListener("submit", (event) => {
 
     //Create list item
     const listItem = document.createElement("li");
+    listItem.classList.add("task-item");
 
     //Create paragraph
     const taskParagraph = document.createElement("p");
     taskParagraph.textContent = taskText;
+    taskParagraph.classList.add("task-text");
 
-    //Add paragraph to li
+    // Create complete button
+    const completeBtn = document.createElement("button");
+    completeBtn.textContent = "✔";
+    completeBtn.classList.add("complete-btn");
+    completeBtn.addEventListener("click", () => {
+        taskParagraph.classList.toggle("completed");
+    });
+    
+    // Create delete button
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "✖";
+    deleteBtn.classList.add("delete-btn");
+    deleteBtn.addEventListener("click", () => {
+        listItem.remove();
+    });
+    
+    // Append elements to list item
+    listItem.appendChild(completeBtn);
     listItem.appendChild(taskParagraph);
-
-    //Add li to ul
+    listItem.appendChild(deleteBtn);
+    
+    // Append list item to task list
     taskList.appendChild(listItem);
-
-    //Clear input field
+    
+    // Clear input field
     taskInput.value = "";
 } )
