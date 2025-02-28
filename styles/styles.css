@@ -3,3 +3,142 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+main {
+    background-color: #5977B8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 3rem;
+    padding-inline: 1rem;
+}
+
+#todo-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    height: auto;
+}
+
+#task-input {
+    width: min(90%, 300px);
+    padding: 0.625rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#add-task-btn {
+    padding: 0.625rem 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background 0.3s ease;
+
+    &:hover {
+        background-color: #218838;
+    }
+}
+
+#task-list {
+    list-style: none;
+    margin-top: 2rem;
+    width: min(90%, 600px);
+    max-height: 60vh;
+    overflow-y: auto;
+    border-radius: 5px;
+    border: solid rgb(190, 186, 186) 2px;
+    padding: 1rem;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.task-text {
+    background: white;
+    flex-grow: 1;
+    border-radius: 5px;
+    padding: 0.625rem;
+    font-family: "Roboto", serif;
+}
+
+.complete-btn {
+    background-color: white;
+    color: #099d2c;
+    border-radius: 5px;
+    padding: 0.5rem;
+    border: solid 2px #099d2c;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-basis: 7%;
+
+    &:hover {
+        background-color: #099d2c;
+        color: white;
+        border: solid white 2px;
+    }
+}
+
+.delete-btn {
+    background-color: white;
+    color: #b30b0b;
+    border-radius: 5px;
+    padding: 0.5rem;
+    border: solid #b30b0b 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-basis: 7%;
+
+    &:hover {
+        background-color: #b30b0b;
+        color: white;
+        border: solid white 2px;
+    }
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.7;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 800px) {
+    .task-text {
+        order: -1;
+        flex-basis: 100%;
+    }
+
+    #task-list {
+        padding: 0.25rem;
+    }
+
+    #task-input {
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+
+    #add-task-btn {
+        width: 50px;
+    }
+
+    .task-text {
+        font-size: 1rem;
+    }
+
+    .complete-btn, .delete-btn {
+        font-size: 0.875rem;
+        padding: 0.5rem;
+    }
+}
+  
